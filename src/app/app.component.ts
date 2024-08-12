@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
-import 'ag-grid-enterprise';
+// import 'ag-grid-enterprise';
 
 @Component({
   selector: 'app-root',
