@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
 import 'ag-grid-enterprise';
 
+import { AgChartOptions, AgCharts } from 'ag-grid-enterprise';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,4 +22,14 @@ export class AppComponent {
     { make: 'Ford', model: 'Mondeo', price: 32000 },
     { make: 'Porsche', model: 'Boxster', price: 72000 }
   ];
+
+  public Chart:AgChartOptions;
+
+  constructor(){
+    this.Chart ={
+      data:this.rowData,
+      // series:[{type:"chord",xKey:"price",yKey:"model"}]
+    }
+  }
+
 }
